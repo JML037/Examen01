@@ -1,0 +1,32 @@
+#container-board {
+    max-width: 1000px; /* Ancho del tablero */
+ }
+ 
+ #board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 8 columnas iguales en el tablero */
+    grid-template-rows: repeat(5, 1fr); /* 8 filas en el tablero */
+ }
+ 
+ .box {
+    background-color: #EBEBD0; /* Color de fondo de las casillas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em; /* Tamaño de la fuente de las piezas */
+ }  
+
+ .box{
+    color:#56483b; /* Color de las piezas */
+ }
+ .box:nth-child(2n+1){
+    background-color: #759652; /*Se cambia el color de fondo de todas las casillas impares*/ 
+ }
+ .box:nth-child(2n+10){
+    background-color: #EBEBD0; /*Se cambia el color de fondo de todas las casillas desde la novena en posiciones pares*/
+ }
+ .box:nth-child(2n+11){ 
+    background-color:#759652; /*Se cambia el color de fondo de todas las casillas desde la decima en posiciones pares*/
+ }
+ 
+ /*etc, hasta el selector .box:nth-child(2n+58)*/
